@@ -1,0 +1,12 @@
+### 登陆
+POST {{host}}/api/login
+Content-Type: application/x-www-form-urlencoded
+
+account={{account}}&password={{password}}
+
+### 测试接口
+GET {{host}}/api/security/test
+Accept: application/json
+Cookie: JSESSIONID=F3800727DC98D1221A4D0E0880AE5B4E
+
+###

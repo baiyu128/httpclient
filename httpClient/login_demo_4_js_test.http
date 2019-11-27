@@ -1,0 +1,16 @@
+### 登陆
+POST {{host}}/api/login
+Content-Type: application/x-www-form-urlencoded
+
+account={{account}}&password={{password}}
+
+> {% client.global.set("Set-Cookie", response.headers.valueOf("Set-Cookie")) %}
+
+### 测试接口
+GET {{host}}/api/security/test
+Accept: text/plain
+Cookie: {{Set-Cookie}}
+
+> login_demo_4_js_test.js
+
+###
